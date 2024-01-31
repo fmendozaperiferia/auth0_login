@@ -9,6 +9,7 @@ const { auth } = require('express-openid-connect');
 dotenv.load();
 
 const app = express();
+app.set('trust proxy', true);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
